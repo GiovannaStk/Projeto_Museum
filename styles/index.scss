@@ -24,11 +24,6 @@
     
 }
 
-body{
-    overflow: scroll;
-    scroll-behavior: smooth;
-}
-
 
 .event-description{
     background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../assets/imgs/header-banner.jpg);
@@ -154,8 +149,7 @@ body{
         font-size: 3em;
         color: var(--text-secundary);
         font-family:"Aboreto";
-        padding: 1.2em 0;
-        font-weight: 500;             
+        padding: 1.2em 0;                  
     }
 
     .sections{
@@ -322,53 +316,6 @@ body{
   
 }
 
-.cta{
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-position: center;
-    background-size: cover;
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../assets/imgs/header-banner.jpg);
- 
-
-        h3{
-            color: var(--text-secundary);
-            font-family:"Aboreto";
-            margin-bottom: 1.2em;
-            font-size: 2em;
-            font-weight: 500;
-
-        }
-    
-        .btn{
-            background-color: var(--text-secundary);                   
-            max-width: 30%;
-            padding: 10px;
-            cursor: pointer;
-            border:none;
-            opacity: 0.8;     
-            border-radius:10px;        
-            margin-bottom: 0.5em;  
-           
-
-            a{
-                font-weight: 600;
-                font-size: 1.2em;
-                font-family:"Aboreto";
-                color: var(--primary);
-                text-transform: uppercase;
-                text-decoration: none;                
-            }
-        }
-        .btn:hover{
-            transition: 1s;
-            opacity:1 ;              
-        }
-                 
-}
-
 .ideas{
     height: 300px;
     background-color: var(--text-secundary);
@@ -418,6 +365,51 @@ body{
         }
 }
 
+.cta{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../assets/imgs/header-banner.jpg);
+ 
+
+        h3{
+            color: var(--text-secundary);
+            font-family:"Aboreto";
+            margin-bottom: 1.2em;
+            font-size: 2em;           
+        }
+    
+        .btn{
+            background-color: var(--text-secundary);                   
+            max-width: 30%;
+            padding: 10px;
+            cursor: pointer;
+            border:none;
+            opacity: 0.8;     
+            border-radius:10px;        
+            margin-bottom: 0.5em;  
+           
+
+            a{
+                font-weight: 600;
+                font-size: 1.2em;
+                font-family:"Aboreto";
+                color: var(--primary);
+                text-transform: uppercase;
+                text-decoration: none;                
+            }
+        }
+        .btn:hover{
+            transition: 1s;
+            opacity:1 ;              
+        }
+                 
+}
+
 footer{
     background-color: var(--secundary);
     display: flex;
@@ -441,6 +433,12 @@ footer{
             font-size: 1.1em;
             text-align: center;
             color: var(--primary);
+
+            p{
+                span{
+                    font-weight: bold;
+                }
+            }
         }
     }
     .media-social{    
@@ -467,7 +465,7 @@ footer{
             }
     
             .insta{            
-                background-image: url('../assets/imgs/icon-instagra.png');
+                background-image: url('../assets/imgs/icon-instagram.png');
             }
             
             .facebook{
@@ -475,10 +473,149 @@ footer{
             }
     
             .youtube{
-                background-image: url('../assets/imgs/icon-reproduzir.png');
+                background-image: url('../assets/imgs/icon-youtube.png');
             }
         }   
     }
 
+}
+
+//Mobile
+@media (max-width: 450px) {
+    .event-description{
+        flex-direction: column;
+        height: auto;
+
+        .disclaimer{
+            text-align: center;
+            padding: 2em;
+            h1{
+                margin-bottom: .5em;
+            }           
+        }
+
+        .form{
+            width: auto;
+            margin-bottom: 2em;
+
+            .btn{
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    .key-benefits{
+        .sections{
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+            width: auto;
+            gap: 40px;
+
+            .item{
+                max-width: 100%;                
+                p{
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    .location{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 2em 0;
+        gap: 40px;
+
+        .adress{
+            order: 2;            
+            max-width: 100%;
+
+            .icon{
+                margin: 3em 0;
+            }
+        }
+        .about-location{
+            order: 1;
+            max-width: 100%;
+
+            h3{
+                margin-bottom: 0;
+                font-size: 2em;
+            }
+
+            p{
+                display: none;
+            }
+        }
+    }
+
+    .details{
+        
+        .detail{
+            flex-direction: column;
+            margin-bottom: .5em;
+            gap: 0;
+
+            .img{
+                width: 100%;
+                margin: 2em 0;
+            }
+
+            .img-1{
+                display: none;
+            }
+
+            .detail-description{
+                padding: 0;
+                text-align: center;
+            }
+        }
+
+        .detail-2{
+            flex-direction: column-reverse;
+        }
+
+        .detail-1{
+            .detail-description{                
+                h3{
+                    font-size: 2em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .ideas{
+        padding: 2em;
+        h3{
+            margin-bottom: .5em;
+        }
+        p{
+            max-width: 100%;
+            padding-bottom: 0.5em;
+        }
+
+        .btn{
+            max-width: 100%;
+            opacity: 1;
+        }
+    }
+
+    .cta{
+
+        .btn{
+            max-width: 100%;
+            opacity: 1;
+        }
+    }
+
+    footer{
+        padding: 2em;
+        flex-direction: column;
+        height: auto;
+        gap: 50px;
+    }
 }
 
