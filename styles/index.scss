@@ -1,0 +1,484 @@
+//fonts
+@font-face {
+    font-family:"Aboreto";
+    src: url(../assets/fonts/Aboreto-Regular.ttf);
+}
+
+@font-face {
+    font-family:"NotoSerif";
+    src: url(../assets/fonts/NotoSerif-Regular.ttf);
+}
+:root{
+    --primary:#fff;
+    --secundary:#000;
+    --tertiary:#1a1a1a;
+    --text-primary:#909090;
+    --text-secundary:#008573;
+}
+
+*{
+    font-family:"NotoSerif";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+
+.event-description{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../assets/imgs/header-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--primary);        
+
+    .disclaimer{
+        h1, .event-date {
+            color: var(--text-secundary);           
+        }
+
+        h1{
+            font-family:"Aboreto";
+            font-size: 3em;
+            margin-bottom: 1em;
+        }
+
+        p{
+            font-size: 1.2em;
+            margin-bottom: 0.3em;
+        }
+
+        .discription-event{
+            font-size: 2em;
+            text-transform: uppercase;
+            max-width: 350px;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+    }
+
+    .form{
+        background-color: rgba(250, 250, 250, 0.2);
+        backdrop-filter:blur(4px);
+        border-radius:10px;
+        padding: 2em;
+        width: 22%;
+
+        p{
+            font-size: 1.5em;
+            color: var(--text-secundary);
+            margin-bottom: 1em;
+            font-family:"Aboreto";
+            font-weight: bold;
+
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0.8em;
+
+            .form-group{
+                margin-bottom: 1.3em;
+                input, select{
+                    padding: 6px 8px;
+                    background-color: transparent;
+                    box-shadow: none;
+                    text-decoration: none;
+                    border: none;
+                    border-bottom: 1px solid var(--primary);
+                    outline: none;
+                }
+
+                input::-webkit-input-placeholder { 
+                    color:white;
+                }
+
+                select{
+                    color: var(--primary);   
+                    
+                    option{
+                        color: var(--text-primary);
+                    }
+                }
+            }
+
+            .flex{
+                display: flex;
+                flex-direction: column;
+                
+                label{
+                    color: var(--primary);
+                    font-size: 0.9em;                          
+                }
+            }
+
+            .btn{
+                background-color: var(--text-secundary);                   
+                max-width: 100%;
+                padding: 10px;
+                cursor: pointer;
+                border:none;
+                opacity: 0.8;     
+                border-radius:10px;          
+
+                a{
+                    font-family:"Aboreto";
+                    color: var(--primary);
+                    text-transform: uppercase;
+                }
+            }
+            .btn:hover{
+                transition: 3s;
+                opacity:1 ;              
+            }
+            
+        }
+    }
+}  
+
+.key-benefits{
+    height: auto;
+    margin-bottom: 4em;
+
+    .title{
+        text-align: center;
+        font-size: 3em;
+        color: var(--text-secundary);
+        font-family:"Aboreto";
+        padding: 1.2em 0;
+        font-weight: 500;             
+    }
+
+    .sections{
+        display: flex;
+        justify-content: space-between;
+        padding: 4em;
+        width: 80%;        
+        margin: 0 auto;
+        border: 2px solid;
+        border-image: linear-gradient(to left, var(--text-secundary), greenyellow) 1 0;
+       
+        .item{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 20%;
+            gap:20px;
+            transition: transform .3s;
+            will-change: transform;
+            transform: scaleX(1);
+          
+
+            p{
+                font-size: 1.3em;
+                font-family:"Aboreto";
+                color: var(--text-primary);
+            }
+
+            .item-img{
+                width: 250px;
+                height: 250px;
+                border-radius: 100%;
+                background-size: cover;
+                background-position: center;
+               
+            }           
+
+            .item-1{
+                background-image: url(../assets/imgs/item-1.png);
+            }
+            .item-2{
+                background-image: url(../assets/imgs/item-2.png);
+            }
+            .item-3{
+                background-image: url(../assets/imgs/item-3.png);
+            }
+        }
+
+        .item:hover{
+            transform: scale3d(1.025,1.025,1)
+        }
+    }
+
+}
+
+.location{
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../assets/imgs/location.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--primary);
+    margin-bottom: 3em;
+    .adress{
+        display: flex;
+        .icon{
+            background-image: url('../assets/imgs/local.png');
+            height: 30px;
+            width: 30px;
+            background-position:center;
+            background-size: cover;
+        }
+
+        .adress-info{
+            text-align: left;
+            font-size: 1.3em;
+        }
+
+    }
+
+    .about-location{
+        h3{
+            color: var(--text-secundary);
+            font-size: 2.5em;            
+            text-transform: uppercase;
+            font-family:"Aboreto";
+        }
+    }
+    .adress, .about-location{
+        max-width: 50%;
+    }
+
+}
+
+.details{
+    width: 80%;
+    margin: 0 auto;
+    .detail{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5%;
+        margin-bottom:4em;
+
+        .img{
+            width: 500px;
+            display: block;
+            background-position: center;
+            background-size: 100%;
+            border-radius: 100%;
+            height: 328px;
+            background-repeat: no-repeat;         
+        }
+
+        .img-1{
+            background-image: url('../assets/imgs/details-1.jpg');
+        }
+
+        .img-2{
+            background-image: url('../assets/imgs/details-2.png');
+        }
+
+        .img-3{
+            background-image: url('../assets/imgs/details-3.png');
+        }
+
+        .detail-description{
+            width: 100%;
+            padding-left: 2em;
+            h3{
+                margin-bottom: 1em;
+                font-size: 2em;
+                color: var(--text-secundary);
+                font-weight: 500;          
+            }
+
+            ul{
+                list-style-position:inside;
+                list-style-type: georgian;
+
+                    li{
+                        margin-bottom: .4em;                        
+                    }
+
+                    li:last-child{
+                        font-weight: bold;
+                    }                   
+            }
+        }
+    }
+            .detail-1 {
+                .detail-description {
+                    h3 {
+                        font-size: 3em;
+                        font-family: "Aboreto";                     
+                        border-bottom: 3px solid var(--text-secundary);
+                    }
+                }
+            }
+
+  
+}
+
+.cta{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../assets/imgs/header-banner.jpg);
+ 
+
+        h3{
+            color: var(--text-secundary);
+            font-family:"Aboreto";
+            margin-bottom: 1.2em;
+            font-size: 2em;
+            font-weight: 500;
+
+        }
+    
+        .btn{
+            background-color: var(--text-secundary);                   
+            max-width: 30%;
+            padding: 10px;
+            cursor: pointer;
+            border:none;
+            opacity: 0.8;     
+            border-radius:10px;        
+            margin-bottom: 0.5em;  
+           
+
+            a{
+                font-weight: 600;
+                font-size: 1.2em;
+                font-family:"Aboreto";
+                color: var(--primary);
+                text-transform: uppercase;
+                text-decoration: none;                
+            }
+        }
+        .btn:hover{
+            transition: 1s;
+            opacity:1 ;              
+        }
+                 
+}
+
+.ideas{
+    height: 300px;
+    background-color: var(--text-secundary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+        h3{
+            color: var(--primary);
+            font-family:"Aboreto";
+            margin-bottom: 1.2em;
+            font-size: 2em;
+            font-weight: 500;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        p{
+            text-align: center;
+            max-width: 80%;
+            font-size: 1.3em;
+            font-family:"Aboreto";
+            color: var(--primary);
+        }
+
+        .btn{
+            background-color: goldenrod;                   
+            max-width: 30%;
+            padding: 10px;
+            cursor: pointer;
+            border:none;
+            opacity: 0.8;     
+            border-radius:10px;        
+            margin-bottom: 0.5em;  
+        
+            a{
+                font-weight: 600;
+                font-size: 1.2em;
+                font-family:"Aboreto";
+                color: var(--primary);
+                text-transform: uppercase;
+            }
+        }
+        .btn:hover{
+            transition: 1s;
+            opacity:1 ;              
+        }
+}
+
+footer{
+    background-color: var(--secundary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+  
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            color: var(--text-secundary);
+            font-family:"Aboreto";
+            margin-bottom: 1.2em;
+            font-size: 2em;
+            font-weight: 500;
+            border-bottom: 1px solid #fff;
+        }
+        .infos{
+            font-size: 1.1em;
+            text-align: center;
+            color: var(--primary);
+        }
+    }
+    .media-social{    
+        h3{
+            color: var(--text-secundary);
+            font-family:"Aboreto";
+            margin-bottom: 1.2em;
+            font-size: 2em;
+            font-weight: 500;
+            border-bottom: 1px solid #fff;
+        }
+
+        .medias{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .icon{
+                height: 30px;
+                width: 30px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
+    
+            .insta{            
+                background-image: url('../assets/imgs/icon-instagra.png');
+            }
+            
+            .facebook{
+                background-image: url('../assets/imgs/icon-facebook.png');
+            }
+    
+            .youtube{
+                background-image: url('../assets/imgs/icon-reproduzir.png');
+            }
+        }   
+    }
+
+}
+

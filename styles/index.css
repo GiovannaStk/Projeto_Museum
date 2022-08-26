@@ -1,0 +1,414 @@
+@font-face {
+  font-family: "Aboreto";
+  src: url(../assets/fonts/Aboreto-Regular.ttf);
+}
+@font-face {
+  font-family: "NotoSerif";
+  src: url(../assets/fonts/NotoSerif-Regular.ttf);
+}
+:root {
+  --primary:#fff;
+  --secundary:#000;
+  --tertiary:#1a1a1a;
+  --text-primary:#909090;
+  --text-secundary:#008573;
+}
+
+* {
+  font-family: "NotoSerif";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.event-description {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/imgs/header-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--primary);
+}
+.event-description .disclaimer h1, .event-description .disclaimer .event-date {
+  color: var(--text-secundary);
+}
+.event-description .disclaimer h1 {
+  font-family: "Aboreto";
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+.event-description .disclaimer p {
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+.event-description .disclaimer .discription-event {
+  font-size: 2em;
+  text-transform: uppercase;
+  max-width: 350px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.event-description .form {
+  background-color: rgba(250, 250, 250, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  padding: 2em;
+  width: 22%;
+}
+.event-description .form p {
+  font-size: 1.5em;
+  color: var(--text-secundary);
+  margin-bottom: 1em;
+  font-family: "Aboreto";
+  font-weight: bold;
+}
+.event-description .form form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8em;
+}
+.event-description .form form .form-group {
+  margin-bottom: 1.3em;
+}
+.event-description .form form .form-group input, .event-description .form form .form-group select {
+  padding: 6px 8px;
+  background-color: transparent;
+  box-shadow: none;
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px solid var(--primary);
+  outline: none;
+}
+.event-description .form form .form-group input::-webkit-input-placeholder {
+  color: white;
+}
+.event-description .form form .form-group select {
+  color: var(--primary);
+}
+.event-description .form form .form-group select option {
+  color: var(--text-primary);
+}
+.event-description .form form .flex {
+  display: flex;
+  flex-direction: column;
+}
+.event-description .form form .flex label {
+  color: var(--primary);
+  font-size: 0.9em;
+}
+.event-description .form form .btn {
+  background-color: var(--text-secundary);
+  max-width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+.event-description .form form .btn a {
+  font-family: "Aboreto";
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.event-description .form form .btn:hover {
+  transition: 3s;
+  opacity: 1;
+}
+
+.key-benefits {
+  height: auto;
+  margin-bottom: 4em;
+}
+.key-benefits .title {
+  text-align: center;
+  font-size: 3em;
+  color: var(--text-secundary);
+  font-family: "Aboreto";
+  padding: 1.2em 0;
+  font-weight: 500;
+}
+.key-benefits .sections {
+  display: flex;
+  justify-content: space-between;
+  padding: 4em;
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid;
+  border-image: linear-gradient(to left, var(--text-secundary), greenyellow) 1 0;
+}
+.key-benefits .sections .item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20%;
+  gap: 20px;
+  transition: transform 0.3s;
+  will-change: transform;
+  transform: scaleX(1);
+}
+.key-benefits .sections .item p {
+  font-size: 1.3em;
+  font-family: "Aboreto";
+  color: var(--text-primary);
+}
+.key-benefits .sections .item .item-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.key-benefits .sections .item .item-1 {
+  background-image: url(../assets/imgs/item-1.png);
+}
+.key-benefits .sections .item .item-2 {
+  background-image: url(../assets/imgs/item-2.png);
+}
+.key-benefits .sections .item .item-3 {
+  background-image: url(../assets/imgs/item-3.png);
+}
+.key-benefits .sections .item:hover {
+  transform: scale3d(1.025, 1.025, 1);
+}
+
+.location {
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/imgs/location.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--primary);
+  margin-bottom: 3em;
+}
+.location .adress {
+  display: flex;
+}
+.location .adress .icon {
+  background-image: url("../assets/imgs/local.png");
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.location .adress .adress-info {
+  text-align: left;
+  font-size: 1.3em;
+}
+.location .about-location h3 {
+  color: var(--text-secundary);
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-family: "Aboreto";
+}
+.location .adress, .location .about-location {
+  max-width: 50%;
+}
+
+.details {
+  width: 80%;
+  margin: 0 auto;
+}
+.details .detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
+  margin-bottom: 4em;
+}
+.details .detail .img {
+  width: 500px;
+  display: block;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 100%;
+  height: 328px;
+  background-repeat: no-repeat;
+}
+.details .detail .img-1 {
+  background-image: url("../assets/imgs/details-1.jpg");
+}
+.details .detail .img-2 {
+  background-image: url("../assets/imgs/details-2.png");
+}
+.details .detail .img-3 {
+  background-image: url("../assets/imgs/details-3.png");
+}
+.details .detail .detail-description {
+  width: 100%;
+  padding-left: 2em;
+}
+.details .detail .detail-description h3 {
+  margin-bottom: 1em;
+  font-size: 2em;
+  color: var(--text-secundary);
+  font-weight: 500;
+}
+.details .detail .detail-description ul {
+  list-style-position: inside;
+  list-style-type: georgian;
+}
+.details .detail .detail-description ul li {
+  margin-bottom: 0.4em;
+}
+.details .detail .detail-description ul li:last-child {
+  font-weight: bold;
+}
+.details .detail-1 .detail-description h3 {
+  font-size: 3em;
+  font-family: "Aboreto";
+  border-bottom: 3px solid var(--text-secundary);
+}
+
+.cta {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/imgs/header-banner.jpg);
+}
+.cta h3 {
+  color: var(--text-secundary);
+  font-family: "Aboreto";
+  margin-bottom: 1.2em;
+  font-size: 2em;
+  font-weight: 500;
+}
+.cta .btn {
+  background-color: var(--text-secundary);
+  max-width: 30%;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  opacity: 0.8;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+}
+.cta .btn a {
+  font-weight: 600;
+  font-size: 1.2em;
+  font-family: "Aboreto";
+  color: var(--primary);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.cta .btn:hover {
+  transition: 1s;
+  opacity: 1;
+}
+
+.ideas {
+  height: 300px;
+  background-color: var(--text-secundary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.ideas h3 {
+  color: var(--primary);
+  font-family: "Aboreto";
+  margin-bottom: 1.2em;
+  font-size: 2em;
+  font-weight: 500;
+  border-bottom: 1px solid var(--primary);
+}
+.ideas p {
+  text-align: center;
+  max-width: 80%;
+  font-size: 1.3em;
+  font-family: "Aboreto";
+  color: var(--primary);
+}
+.ideas .btn {
+  background-color: goldenrod;
+  max-width: 30%;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  opacity: 0.8;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+}
+.ideas .btn a {
+  font-weight: 600;
+  font-size: 1.2em;
+  font-family: "Aboreto";
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.ideas .btn:hover {
+  transition: 1s;
+  opacity: 1;
+}
+
+footer {
+  background-color: var(--secundary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+}
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .contact h3 {
+  color: var(--text-secundary);
+  font-family: "Aboreto";
+  margin-bottom: 1.2em;
+  font-size: 2em;
+  font-weight: 500;
+  border-bottom: 1px solid #fff;
+}
+footer .contact .infos {
+  font-size: 1.1em;
+  text-align: center;
+  color: var(--primary);
+}
+footer .media-social h3 {
+  color: var(--text-secundary);
+  font-family: "Aboreto";
+  margin-bottom: 1.2em;
+  font-size: 2em;
+  font-weight: 500;
+  border-bottom: 1px solid #fff;
+}
+footer .media-social .medias {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .media-social .medias .icon {
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+footer .media-social .medias .insta {
+  background-image: url("../assets/imgs/icon-instagra.png");
+}
+footer .media-social .medias .facebook {
+  background-image: url("../assets/imgs/icon-facebook.png");
+}
+footer .media-social .medias .youtube {
+  background-image: url("../assets/imgs/icon-reproduzir.png");
+}
+
+/*# sourceMappingURL=index.css.map */
